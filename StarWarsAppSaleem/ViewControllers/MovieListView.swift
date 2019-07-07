@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.isHidden = true
-
+        
         self.initNibs()
         self.filmTableView.delegate = self.filmTableViewDelegate
         self.filmTableView.dataSource = self.filmTableViewDelegate

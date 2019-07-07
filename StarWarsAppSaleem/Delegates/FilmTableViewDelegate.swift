@@ -38,6 +38,10 @@ class FilmTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
         let detailViewController: FilmDetailViewController = storyboard.instantiateViewController(withIdentifier: "FilmDetailViewController") as! FilmDetailViewController
         
         parentNavigationController?.pushViewController(detailViewController, animated: false)
+        
+        if let selectionIndexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selectionIndexPath, animated: false)
+        }
     }
     
     func addToTableView(film: Film) {

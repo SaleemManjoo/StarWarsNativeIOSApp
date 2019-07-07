@@ -13,8 +13,6 @@ class FilmDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print("aaaayyyyy")
     }
     
 }
