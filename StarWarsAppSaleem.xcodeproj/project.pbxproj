@@ -18,6 +18,10 @@
 		6404BE3D22D2088000947486 /* FilmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BE3B22D2088000947486 /* FilmCell.swift */; };
 		6404BE3E22D2088000947486 /* FilmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6404BE3C22D2088000947486 /* FilmCell.xib */; };
 		6404BE4122D20CC600947486 /* FilmTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BE4022D20CC600947486 /* FilmTableViewDelegate.swift */; };
+		6404BE4722D217D200947486 /* Swapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BE4622D217D200947486 /* Swapi.swift */; };
+		6404BE4A22D21F3F00947486 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BE4922D21F3F00947486 /* Film.swift */; };
+		6404BE4C22D21FE400947486 /* AllFilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BE4B22D21FE400947486 /* AllFilmsResponse.swift */; };
+		6404BE4E22D23F5A00947486 /* FilmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BE4D22D23F5A00947486 /* FilmService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		6404BE3B22D2088000947486 /* FilmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCell.swift; sourceTree = "<group>"; };
 		6404BE3C22D2088000947486 /* FilmCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmCell.xib; sourceTree = "<group>"; };
 		6404BE4022D20CC600947486 /* FilmTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewDelegate.swift; sourceTree = "<group>"; };
+		6404BE4622D217D200947486 /* Swapi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swapi.swift; sourceTree = "<group>"; };
+		6404BE4922D21F3F00947486 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		6404BE4B22D21FE400947486 /* AllFilmsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFilmsResponse.swift; sourceTree = "<group>"; };
+		6404BE4D22D23F5A00947486 /* FilmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,9 @@
 		6404BDFC22D1ED0C00947486 /* StarWarsAppSaleem */ = {
 			isa = PBXGroup;
 			children = (
+				6404BE4822D21F1100947486 /* Structs */,
+				6404BE4322D2178200947486 /* API */,
+				6404BE4222D2177800947486 /* Services */,
 				6404BE3F22D2088900947486 /* Xib */,
 				6404BE3822D2055200947486 /* Delegates */,
 				6404BE2F22D1F6E100947486 /* ViewControllers */,
@@ -159,6 +170,31 @@
 				6404BE3B22D2088000947486 /* FilmCell.swift */,
 			);
 			path = Xib;
+			sourceTree = "<group>";
+		};
+		6404BE4222D2177800947486 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6404BE4D22D23F5A00947486 /* FilmService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6404BE4322D2178200947486 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6404BE4622D217D200947486 /* Swapi.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6404BE4822D21F1100947486 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				6404BE4922D21F3F00947486 /* Film.swift */,
+				6404BE4B22D21FE400947486 /* AllFilmsResponse.swift */,
+			);
+			path = Structs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +332,10 @@
 				6404BE0622D1ED0C00947486 /* StarWarsAppSaleem.xcdatamodeld in Sources */,
 				6404BE4122D20CC600947486 /* FilmTableViewDelegate.swift in Sources */,
 				6404BE3D22D2088000947486 /* FilmCell.swift in Sources */,
+				6404BE4722D217D200947486 /* Swapi.swift in Sources */,
+				6404BE4C22D21FE400947486 /* AllFilmsResponse.swift in Sources */,
+				6404BE4A22D21F3F00947486 /* Film.swift in Sources */,
+				6404BE4E22D23F5A00947486 /* FilmService.swift in Sources */,
 				6404BE0022D1ED0C00947486 /* MovieListView.swift in Sources */,
 				6404BDFE22D1ED0C00947486 /* AppDelegate.swift in Sources */,
 			);

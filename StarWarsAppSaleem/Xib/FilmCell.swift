@@ -26,4 +26,10 @@ class FilmCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setText(film: Film) {
+        titleLabel.text = film.title
+        releaseDateLabel.text = film.release_date
+        directorLabel.text = film.director
+        producersLabel.text = film.producer
+    }
 }

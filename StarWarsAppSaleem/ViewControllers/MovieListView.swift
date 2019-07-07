@@ -12,16 +12,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var filmTableView: UITableView!
     
     var filmTableViewDelegate = FilmTableViewDelegate()
+    let filmService = FilmService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.initNibs()
+        self.filmTableView.delegate = self.filmTableViewDelegate
+        self.filmTableView.dataSource = self.filmTableViewDelegate
         
-        self.filmTableView.delegate = filmTableViewDelegate
-        self.filmTableView.dataSource = filmTableViewDelegate
+        filmService.getAllFilms { films in
+            self.filmTableViewDelegate.setDataSource(f: films)
+            
+            self.filmTableView.performSelector(onMainThread: #selector(UICollectionView.reloadData), with: nil, waitUntilDone: true)
+        }
     }
 
+    
     private func initNibs() {
         filmTableView.register(UINib(nibName: "FilmCell", bundle: nil), forCellReuseIdentifier: "FilmCell")
     }
