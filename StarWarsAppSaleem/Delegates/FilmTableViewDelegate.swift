@@ -21,7 +21,7 @@ class FilmTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
 
         let film: Film = films[indexPath.row]
         
-        cell.setText(film: film)
+        cell.addContent(film: film)
         
         return cell
     }
@@ -30,9 +30,7 @@ class FilmTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
         return CGFloat(120)
     }
     
-    func setDataSource(f: [Film]) {
-        for film in f {
-            self.films.append(film)
-        }
+    func addToTableView(film: Film) {
+        self.films.append(film)
     }
 }

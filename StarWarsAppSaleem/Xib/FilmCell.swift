@@ -14,6 +14,7 @@ class FilmCell: UITableViewCell {
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var directorLabel: UILabel!
     @IBOutlet weak var producersLabel: UILabel!
+    @IBOutlet weak var posterImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,10 +27,22 @@ class FilmCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setText(film: Film) {
+    func addContent(film: Film) {
         titleLabel.text = film.title
         releaseDateLabel.text = film.release_date
         directorLabel.text = film.director
         producersLabel.text = film.producer
+        
+        if (film.image_url != nil) {
+            let url = URL(string: film.image_url!)
+            
+            //asynchronously add images from urls
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: url!)
+                DispatchQueue.main.async {
+                    self.posterImageView.image = UIImage(data: data!)
+                }
+            }
+        }
     }
 }

@@ -22,7 +22,15 @@ class ViewController: UIViewController {
         self.filmTableView.dataSource = self.filmTableViewDelegate
         
         filmService.getAllFilms { films in
-            self.filmTableViewDelegate.setDataSource(f: films)
+            for var film in films {
+                let imageUrl = self.filmService.getImageUrlByEpisodeId(episodeId: film.episode_id!)
+                let rating = self.filmService.getRatingByEpisodeId(episodeId: film.episode_id!)
+                
+                film.image_url = imageUrl
+                film.rating = rating
+                
+                self.filmTableViewDelegate.addToTableView(film: film)
+            }
             
             self.filmTableView.performSelector(onMainThread: #selector(UICollectionView.reloadData), with: nil, waitUntilDone: true)
         }

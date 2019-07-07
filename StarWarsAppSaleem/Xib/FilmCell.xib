@@ -70,6 +70,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="directorLabel" destination="0Yo-nW-5mU" id="2ep-dt-BlN"/>
+                <outlet property="posterImageView" destination="w3N-8f-VpF" id="FpA-AR-Xq2"/>
                 <outlet property="producersLabel" destination="Ugq-bS-741" id="V83-wj-3dd"/>
                 <outlet property="releaseDateLabel" destination="tA0-qe-38F" id="Pgq-KI-JEs"/>
                 <outlet property="titleLabel" destination="RX4-us-eZD" id="Lim-nc-6T1"/>
