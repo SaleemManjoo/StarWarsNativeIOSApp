@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		6404BDFE22D1ED0C00947486 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BDFD22D1ED0C00947486 /* AppDelegate.swift */; };
-		6404BE0022D1ED0C00947486 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BDFF22D1ED0C00947486 /* ViewController.swift */; };
+		6404BE0022D1ED0C00947486 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BDFF22D1ED0C00947486 /* MovieListView.swift */; };
 		6404BE0322D1ED0C00947486 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6404BE0122D1ED0C00947486 /* Main.storyboard */; };
 		6404BE0622D1ED0C00947486 /* StarWarsAppSaleem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6404BE0422D1ED0C00947486 /* StarWarsAppSaleem.xcdatamodeld */; };
 		6404BE0822D1ED0E00947486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6404BE0722D1ED0E00947486 /* Assets.xcassets */; };
 		6404BE0B22D1ED0E00947486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6404BE0922D1ED0E00947486 /* LaunchScreen.storyboard */; };
 		6404BE1622D1ED0E00947486 /* StarWarsAppSaleemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BE1522D1ED0E00947486 /* StarWarsAppSaleemTests.swift */; };
 		6404BE2122D1ED0E00947486 /* StarWarsAppSaleemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BE2022D1ED0E00947486 /* StarWarsAppSaleemUITests.swift */; };
+		6404BE3D22D2088000947486 /* FilmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BE3B22D2088000947486 /* FilmCell.swift */; };
+		6404BE3E22D2088000947486 /* FilmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6404BE3C22D2088000947486 /* FilmCell.xib */; };
+		6404BE4122D20CC600947486 /* FilmTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BE4022D20CC600947486 /* FilmTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,7 @@
 /* Begin PBXFileReference section */
 		6404BDFA22D1ED0C00947486 /* StarWarsAppSaleem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsAppSaleem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6404BDFD22D1ED0C00947486 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6404BDFF22D1ED0C00947486 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6404BDFF22D1ED0C00947486 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		6404BE0222D1ED0C00947486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6404BE0522D1ED0C00947486 /* StarWarsAppSaleem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StarWarsAppSaleem.xcdatamodel; sourceTree = "<group>"; };
 		6404BE0722D1ED0E00947486 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		6404BE1C22D1ED0E00947486 /* StarWarsAppSaleemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsAppSaleemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6404BE2022D1ED0E00947486 /* StarWarsAppSaleemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAppSaleemUITests.swift; sourceTree = "<group>"; };
 		6404BE2222D1ED0E00947486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6404BE3B22D2088000947486 /* FilmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCell.swift; sourceTree = "<group>"; };
+		6404BE3C22D2088000947486 /* FilmCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmCell.xib; sourceTree = "<group>"; };
+		6404BE4022D20CC600947486 /* FilmTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +105,10 @@
 		6404BDFC22D1ED0C00947486 /* StarWarsAppSaleem */ = {
 			isa = PBXGroup;
 			children = (
+				6404BE3F22D2088900947486 /* Xib */,
+				6404BE3822D2055200947486 /* Delegates */,
+				6404BE2F22D1F6E100947486 /* ViewControllers */,
 				6404BDFD22D1ED0C00947486 /* AppDelegate.swift */,
-				6404BDFF22D1ED0C00947486 /* ViewController.swift */,
 				6404BE0122D1ED0C00947486 /* Main.storyboard */,
 				6404BE0722D1ED0E00947486 /* Assets.xcassets */,
 				6404BE0922D1ED0E00947486 /* LaunchScreen.storyboard */,
@@ -126,6 +134,31 @@
 				6404BE2222D1ED0E00947486 /* Info.plist */,
 			);
 			path = StarWarsAppSaleemUITests;
+			sourceTree = "<group>";
+		};
+		6404BE2F22D1F6E100947486 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6404BDFF22D1ED0C00947486 /* MovieListView.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6404BE3822D2055200947486 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				6404BE4022D20CC600947486 /* FilmTableViewDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		6404BE3F22D2088900947486 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				6404BE3C22D2088000947486 /* FilmCell.xib */,
+				6404BE3B22D2088000947486 /* FilmCell.swift */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6404BE0B22D1ED0E00947486 /* LaunchScreen.storyboard in Resources */,
+				6404BE3E22D2088000947486 /* FilmCell.xib in Resources */,
 				6404BE0822D1ED0E00947486 /* Assets.xcassets in Resources */,
 				6404BE0322D1ED0C00947486 /* Main.storyboard in Resources */,
 			);
@@ -260,7 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6404BE0622D1ED0C00947486 /* StarWarsAppSaleem.xcdatamodeld in Sources */,
-				6404BE0022D1ED0C00947486 /* ViewController.swift in Sources */,
+				6404BE4122D20CC600947486 /* FilmTableViewDelegate.swift in Sources */,
+				6404BE3D22D2088000947486 /* FilmCell.swift in Sources */,
+				6404BE0022D1ED0C00947486 /* MovieListView.swift in Sources */,
 				6404BDFE22D1ED0C00947486 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
