@@ -17,9 +17,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.isHidden = true
+
         self.initNibs()
         self.filmTableView.delegate = self.filmTableViewDelegate
         self.filmTableView.dataSource = self.filmTableViewDelegate
+        self.filmTableViewDelegate.parentNavigationController = self.navigationController
         
         filmService.getAllFilms { films in
             for var film in films {
@@ -35,7 +38,6 @@ class ViewController: UIViewController {
             self.filmTableView.performSelector(onMainThread: #selector(UICollectionView.reloadData), with: nil, waitUntilDone: true)
         }
     }
-
     
     private func initNibs() {
         filmTableView.register(UINib(nibName: "FilmCell", bundle: nil), forCellReuseIdentifier: "FilmCell")

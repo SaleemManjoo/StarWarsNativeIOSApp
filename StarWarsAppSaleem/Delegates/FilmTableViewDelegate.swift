@@ -12,6 +12,8 @@ import UIKit
 class FilmTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     var films: [Film] = [Film]()
     
+    var parentNavigationController: UINavigationController?
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return films.count
     }
@@ -28,6 +30,14 @@ class FilmTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(120)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+
+        let detailViewController: FilmDetailViewController = storyboard.instantiateViewController(withIdentifier: "FilmDetailViewController") as! FilmDetailViewController
+        
+        parentNavigationController?.pushViewController(detailViewController, animated: false)
     }
     
     func addToTableView(film: Film) {
