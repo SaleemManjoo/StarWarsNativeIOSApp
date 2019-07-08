@@ -37,6 +37,8 @@ class FilmTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSourc
 
         let detailViewController: FilmDetailViewController = storyboard.instantiateViewController(withIdentifier: "FilmDetailViewController") as! FilmDetailViewController
         
+        detailViewController.film = films[indexPath.row]
+        
         parentNavigationController?.pushViewController(detailViewController, animated: false)
         
         if let selectionIndexPath = tableView.indexPathForSelectedRow {

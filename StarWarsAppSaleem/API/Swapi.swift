@@ -27,4 +27,18 @@ class Swapi {
             } catch { return }
         }.resume()
     }
+    
+    func getCharacterByUrl(urlString: String, completionHandler: @escaping (_ person: Person)->Void) {
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            do {
+                let person = try JSONDecoder().decode(Person.self, from: data!)
+                
+                _ = completionHandler(person)
+            } catch { return }
+        }.resume()
+    }
 }

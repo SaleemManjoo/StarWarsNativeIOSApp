@@ -50,14 +50,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="titleLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF2-Da-7qa">
-                                        <rect key="frame" x="8" y="8" width="71" height="21"/>
+                                        <rect key="frame" x="8" y="8" width="398" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="releaseDateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ue-t6-FM6">
-                                        <rect key="frame" x="8" y="37" width="133" height="21"/>
+                                        <rect key="frame" x="8" y="37" width="398" height="21"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,10 +85,18 @@
                         <viewLayoutGuide key="safeArea" id="d63-Mq-Ykt"/>
                     </view>
                     <navigationItem key="navigationItem" id="2fi-CR-A6d"/>
+                    <connections>
+                        <outlet property="charactersLabel" destination="Q0L-EP-6pD" id="ZC4-l5-NgP"/>
+                        <outlet property="releaseDateLabel" destination="9Ue-t6-FM6" id="AVx-Hh-BRR"/>
+                        <outlet property="titleLabel" destination="uF2-Da-7qa" id="T9a-h0-eGB"/>
+                        <outletCollection property="titleLabel" destination="uF2-Da-7qa" collectionClass="NSMutableArray" id="7Qa-Td-Nlz"/>
+                        <outletCollection property="releaseDateLabel" destination="9Ue-t6-FM6" collectionClass="NSMutableArray" id="jIr-66-2bl"/>
+                        <outletCollection property="charactersLabel" destination="Q0L-EP-6pD" collectionClass="NSMutableArray" id="RhV-na-1kR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLk-mT-cmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1883" y="21"/>
+            <point key="canvasLocation" x="1882.608695652174" y="20.758928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tLD-PY-cN0">

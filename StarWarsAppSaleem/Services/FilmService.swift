@@ -20,6 +20,30 @@ class FilmService {
         })
     }
     
+    func getCharactersString(characterUrls: [String], completionHandler: @escaping (String) -> Void) {
+        var charactersString = ""
+        
+        let group = DispatchGroup()
+        
+        for characterUrl in characterUrls {
+            group.enter()
+            
+            swapi.getCharacterByUrl(urlString: characterUrl) { person in
+                let name = person.name!
+                
+                if (characterUrl == characterUrls[0]) {
+                    charactersString = charactersString + name
+                } else {
+                    charactersString = charactersString + ", " + name
+                }
+                group.leave()
+            }
+        }
+        
+        group.wait()
+        completionHandler(charactersString)
+    }
+
     func getRatingByEpisodeId(episodeId: Int) -> Float{
         switch episodeId {
         case 1:

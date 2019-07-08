@@ -22,6 +22,7 @@
 		6404BE4A22D21F3F00947486 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BE4922D21F3F00947486 /* Film.swift */; };
 		6404BE4C22D21FE400947486 /* AllFilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BE4B22D21FE400947486 /* AllFilmsResponse.swift */; };
 		6404BE4E22D23F5A00947486 /* FilmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404BE4D22D23F5A00947486 /* FilmService.swift */; };
+		64B65EE122D3C41C00BDD012 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B65EE022D3C41C00BDD012 /* Person.swift */; };
 		64C7073D22D28A8200569817 /* FilmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C7073C22D28A8200569817 /* FilmDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		6404BE4922D21F3F00947486 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		6404BE4B22D21FE400947486 /* AllFilmsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFilmsResponse.swift; sourceTree = "<group>"; };
 		6404BE4D22D23F5A00947486 /* FilmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmService.swift; sourceTree = "<group>"; };
+		64B65EE022D3C41C00BDD012 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		64C7073C22D28A8200569817 /* FilmDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +198,7 @@
 			children = (
 				6404BE4922D21F3F00947486 /* Film.swift */,
 				6404BE4B22D21FE400947486 /* AllFilmsResponse.swift */,
+				64B65EE022D3C41C00BDD012 /* Person.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				6404BE4122D20CC600947486 /* FilmTableViewDelegate.swift in Sources */,
 				6404BE3D22D2088000947486 /* FilmCell.swift in Sources */,
 				6404BE4722D217D200947486 /* Swapi.swift in Sources */,
+				64B65EE122D3C41C00BDD012 /* Person.swift in Sources */,
 				6404BE4C22D21FE400947486 /* AllFilmsResponse.swift in Sources */,
 				6404BE4A22D21F3F00947486 /* Film.swift in Sources */,
 				6404BE4E22D23F5A00947486 /* FilmService.swift in Sources */,
