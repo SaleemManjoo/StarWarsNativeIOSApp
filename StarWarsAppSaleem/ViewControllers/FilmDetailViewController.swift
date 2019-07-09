@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FilmDetailViewController: UIViewController {
+class FilmDetailViewController: ParentViewController {
     var film: Film!
     
     let filmService = FilmService()
@@ -34,6 +34,7 @@ class FilmDetailViewController: UIViewController {
         self.releaseDateLabel.text = self.film.release_date
         self.charactersLabel.text = ""
         
+        startSpinner()
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             let group = DispatchGroup()
             
@@ -50,6 +51,8 @@ class FilmDetailViewController: UIViewController {
             
             self.initializeOpeningCrawl()
             self.animateOpeningCrawl()
+            
+            self.stopSpinner()
         }
     }
     

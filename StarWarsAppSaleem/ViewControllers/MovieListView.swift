@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: ParentViewController {
     @IBOutlet weak var filmTableView: UITableView!
     
     var filmTableViewDelegate = FilmTableViewDelegate()
@@ -24,6 +24,8 @@ class ViewController: UIViewController {
         self.filmTableView.dataSource = self.filmTableViewDelegate
         self.filmTableViewDelegate.parentNavigationController = self.navigationController
         
+        startSpinner()
+        
         filmService.getAllFilms { films in
             for var film in films {
                 let imageUrl = self.filmService.getImageUrlByEpisodeId(episodeId: film.episode_id!)
@@ -36,6 +38,8 @@ class ViewController: UIViewController {
             }
             
             self.filmTableView.performSelector(onMainThread: #selector(UICollectionView.reloadData), with: nil, waitUntilDone: true)
+            
+            self.stopSpinner()
         }
     }
     
