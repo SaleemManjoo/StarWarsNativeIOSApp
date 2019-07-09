@@ -26,28 +26,31 @@ class FilmDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        titleLabel.text = film.title
-        releaseDateLabel.text = film.release_date
-        
-        let group = DispatchGroup()
-        
-        group.enter()
-        filmService.getCharacterNames(characterUrls: film.characters!) { chars in
-            self.characters = chars
-            group.leave()
-        }
-        
-        group.wait()
-        
-        charactersLabel.text = createCharactersString(characters: self.characters)
-        charactersLabel.sizeToFit()
-        
-        initializeOpeningCrawl()
-        animateOpeningCrawl()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.titleLabel.text = self.film.title
+        self.releaseDateLabel.text = self.film.release_date
+        self.charactersLabel.text = ""
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            let group = DispatchGroup()
+            
+            group.enter()
+            self.filmService.getCharacterNames(characterUrls: self.film.characters!) { chars in
+                self.characters = chars
+                group.leave()
+            }
+            
+            group.wait()
+            
+            self.charactersLabel.text = self.createCharactersString(characters: self.characters)
+            self.charactersLabel.sizeToFit()
+            
+            self.initializeOpeningCrawl()
+            self.animateOpeningCrawl()
+        }
     }
     
     private func createCharactersString(characters: [String]) -> String{
