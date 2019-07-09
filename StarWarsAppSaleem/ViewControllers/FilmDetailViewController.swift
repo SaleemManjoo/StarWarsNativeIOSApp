@@ -56,10 +56,10 @@ class FilmDetailViewController: UIViewController {
         transformLayer.addSublayer(crawlingTextView.layer)
         self.view.layer.addSublayer(transformLayer)
         
-        crawlingTextView.layer.transform = CATransform3DMakeRotation(1, 1, 0, 0)
+        crawlingTextView.layer.transform = CATransform3DMakeRotation(1.5, 1, 0, 0)
         
         crawlingTextLabel.center.x = self.view.center.x - 50
-        crawlingTextLabel.center.y = self.view.center.y + crawlingTextLabel.bounds.size.height
+        crawlingTextLabel.center.y = self.view.center.y + (crawlingTextLabel.bounds.size.height / 1.8)
         
         animateOpeningCrawl()
     }
@@ -82,8 +82,8 @@ class FilmDetailViewController: UIViewController {
     }
     
     private func animateOpeningCrawl() {
-        UIView.animate(withDuration: 10) {
-            self.crawlingTextLabel.center.y = self.crawlingTextView.bounds.height - (self.crawlingTextLabel.bounds.height * 2)
-        }
+        UIView.animate(withDuration: 60) {
+            self.crawlingTextLabel.center.y = self.crawlingTextView.bounds.height - (self.crawlingTextLabel.bounds.height * 4)
+        }        
     }
 }
