@@ -53,10 +53,11 @@ class FilmDetailViewController: UIViewController {
         
 //        transformLayer.position = CGPoint(x: crawlingTextView.bounds.midX, y: crawlingTextView.bounds.midY - 500)
         
-        transformLayer.addSublayer(crawlingTextLabel.layer)
-        crawlingTextView.layer.addSublayer(transformLayer)
+        transformLayer.addSublayer(crawlingTextView.layer)
+        self.view.layer.addSublayer(transformLayer)
         
-        crawlingTextLabel.layer.transform = CATransform3DMakeRotation(1, 1, 0, 0)
+        crawlingTextView.layer.transform = CATransform3DMakeRotation(1, 1, 0, 0)
+        
         crawlingTextLabel.center.x = self.view.center.x - 50
         crawlingTextLabel.center.y = self.view.center.y + crawlingTextLabel.bounds.size.height
         
@@ -81,8 +82,8 @@ class FilmDetailViewController: UIViewController {
     }
     
     private func animateOpeningCrawl() {
-        UIView.animate(withDuration: 5) {
-            self.crawlingTextLabel.center.y = self.crawlingTextView.bounds.height - (self.crawlingTextLabel.bounds.height)
+        UIView.animate(withDuration: 10) {
+            self.crawlingTextLabel.center.y = self.crawlingTextView.bounds.height - (self.crawlingTextLabel.bounds.height * 2)
         }
     }
 }
