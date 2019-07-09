@@ -17,4 +17,5 @@ struct Film : Decodable{
     let episode_id: Int?
     var rating: Float?
     var image_url: String?
+    let opening_crawl: String?
 }

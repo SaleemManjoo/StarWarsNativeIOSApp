@@ -19,6 +19,10 @@ class FilmDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var charactersLabel: UILabel!
+    @IBOutlet weak var crawlingTextLabel: UILabel!
+    
+    @IBOutlet weak var detailTextView: UIView!
+    @IBOutlet weak var crawlingTextView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,17 +41,13 @@ class FilmDetailViewController: UIViewController {
         group.wait()
         
         charactersLabel.text = createCharactersString(characters: self.characters)
-        charactersLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
-        
-        charactersLabel.adjustsFontSizeToFitWidth = true
-
         charactersLabel.sizeToFit()
-        charactersLabel.adjustsFontSizeToFitWidth = true
+        
+        crawlingTextLabel.text = film.opening_crawl
+        crawlingTextLabel.sizeToFit()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        charactersLabel.sizeToFit()
-
     }
     
     private func createCharactersString(characters: [String]) -> String{

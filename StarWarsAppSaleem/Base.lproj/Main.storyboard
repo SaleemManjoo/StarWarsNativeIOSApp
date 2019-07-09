@@ -45,9 +45,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QqN-Er-0HS">
-                                <rect key="frame" x="20" y="44" width="386" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QqN-Er-0HS" userLabel="DetailTextView">
+                                <rect key="frame" x="20" y="44" width="386" height="218"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="titleLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF2-Da-7qa">
                                         <rect key="frame" x="8" y="8" width="398" height="21"/>
@@ -80,6 +80,20 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fV4-6u-qX0" userLabel="CrawlingTextView">
+                                <rect key="frame" x="20" y="270" width="374" height="592"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" text="Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag4-mc-8WU" userLabel="CrawlingTextLabel">
+                                        <rect key="frame" x="8" y="8" width="358" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="d63-Mq-Ykt"/>
@@ -87,6 +101,9 @@
                     <navigationItem key="navigationItem" id="2fi-CR-A6d"/>
                     <connections>
                         <outlet property="charactersLabel" destination="RKH-Jb-XXo" id="oHc-v1-tHX"/>
+                        <outlet property="crawlingTextLabel" destination="Ag4-mc-8WU" id="XPs-tB-sAa"/>
+                        <outlet property="crawlingTextView" destination="fV4-6u-qX0" id="Z38-Ss-i5G"/>
+                        <outlet property="detailTextView" destination="QqN-Er-0HS" id="vD5-Ri-tEC"/>
                         <outlet property="releaseDateLabel" destination="9Ue-t6-FM6" id="AVx-Hh-BRR"/>
                         <outlet property="titleLabel" destination="uF2-Da-7qa" id="T9a-h0-eGB"/>
                         <outletCollection property="titleLabel" destination="uF2-Da-7qa" collectionClass="NSMutableArray" id="7Qa-Td-Nlz"/>
