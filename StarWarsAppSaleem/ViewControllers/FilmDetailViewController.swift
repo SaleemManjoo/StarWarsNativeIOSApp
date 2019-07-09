@@ -43,24 +43,7 @@ class FilmDetailViewController: UIViewController {
         charactersLabel.text = createCharactersString(characters: self.characters)
         charactersLabel.sizeToFit()
         
-        crawlingTextLabel.text = film.opening_crawl
-        crawlingTextLabel.sizeToFit()
-        
-        let transformLayer = CATransformLayer()
-        var perspective = CATransform3DIdentity
-        perspective.m34 = -1 / 500
-        transformLayer.transform = perspective
-        
-//        transformLayer.position = CGPoint(x: crawlingTextView.bounds.midX, y: crawlingTextView.bounds.midY - 500)
-        
-        transformLayer.addSublayer(crawlingTextView.layer)
-        self.view.layer.addSublayer(transformLayer)
-        
-        crawlingTextView.layer.transform = CATransform3DMakeRotation(1.5, 1, 0, 0)
-        
-        crawlingTextLabel.center.x = self.view.center.x - 50
-        crawlingTextLabel.center.y = self.view.center.y + (crawlingTextLabel.bounds.size.height / 1.8)
-        
+        initializeOpeningCrawl()
         animateOpeningCrawl()
     }
     
@@ -81,9 +64,28 @@ class FilmDetailViewController: UIViewController {
         return charactersString
     }
     
+    private func initializeOpeningCrawl() {
+        crawlingTextLabel.text = film.opening_crawl
+        crawlingTextLabel.sizeToFit()
+        
+        let transformLayer = CATransformLayer()
+        var perspective = CATransform3DIdentity
+        perspective.m34 = -1 / 500
+        transformLayer.transform = perspective
+        
+        transformLayer.addSublayer(crawlingTextView.layer)
+        self.view.layer.addSublayer(transformLayer)
+        
+        crawlingTextView.layer.transform = CATransform3DMakeRotation(1.5, 1, 0, 0)
+        
+        crawlingTextLabel.center.x = self.view.center.x - 50
+        crawlingTextLabel.center.y = self.view.center.y + (crawlingTextLabel.bounds.size.height / 1.8)
+        
+    }
+    
     private func animateOpeningCrawl() {
         UIView.animate(withDuration: 60) {
             self.crawlingTextLabel.center.y = self.crawlingTextView.bounds.height - (self.crawlingTextLabel.bounds.height * 4)
-        }        
+        }
     }
 }
